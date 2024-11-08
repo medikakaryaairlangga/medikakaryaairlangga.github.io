@@ -12,6 +12,7 @@ body {
 
 header {
     position: fixed;
+    display: flex;
     top: 0;
     left: 0;
     width: 100%;
@@ -27,51 +28,55 @@ header {
     background-color: #fff;
 }
 
+
+/* === HEADER === */
 .logo img {
     width: 140px;
 }
 
-nav ul {
-    list-style: none;
+.navbar a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+
+.navbar {
     display: flex;
     gap: 20px;
 }
 
-nav ul li {
-    display: inline;
+/* Hide the navbar on mobile view */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: black;
 }
 
-nav ul li a {
+
+.navbar a {
     text-decoration: none;
     color: #003060;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.navbar a:hover {
     color: #F97FAF; /* Change to pink on hover */
 }
 
-.cta-button {
-    background-color: #00C1C1;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
 
-.cta-button:hover {
-    background-color: #F97FAF; /* Change CTA button background to pink on hover */
-}
-
-
+/* === Main Page === */
 .hero {
     display: flex;
     align-items: center;
     padding: 230px 50px;
     background: linear-gradient(120deg, #003060 70%, white 30%);
+    background-color: transparent;
+    
     color: white;
     position: relative;
     min-height: 100vh;
@@ -107,17 +112,17 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
+/* === ABOUT ===*/
+
 .about {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 50px 25px;
-    color: #003060;
-    position: relative;
+    display: grid;
+    grid-template-columns: 30% auto;
+    padding: 50px;
+    text-align: justify;
 }
 
 .about img{
-    width: 350px;
+    width: 250px;
     padding-right: 20px;
 }
 
@@ -154,10 +159,7 @@ nav ul li a:hover {
     color: #555;
 }
 
-
-
-
-
+/* === FOOTER ===*/
 footer {
     background-color: #003060;
     color: white;
@@ -249,17 +251,35 @@ h3 {
         align-items: flex-start;
     }
 
-    nav ul {
-        flex-direction: row;
-        gap: 10px;
-        margin-top: 10px;
-        padding: 10px 10px;
+    /* === NAVBAR === */
+    .navbar {
+        display: none; /* Hide initially on mobile */
+        width: 100%; 
+        justify-content: center;
+        flex-direction: column; /* Stacked by default on mobile */
     }
 
-    .cta-button {
-        align-self: flex-end;
-        margin-top: 10px;
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
     }
+
+    /* Show the navbar in a row when toggled */
+    .navbar.active {
+        display: flex; /* Display flex when active */
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: center;
+        gap: 10px; /* Adds space between items */
+    }
+
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+        color: #003060;
+        font-weight: bold;
+    }
+
+
 
     .hero {
         flex-direction: column;
@@ -289,6 +309,22 @@ h3 {
     .hero-text p {
         font-size: 16px;
     }
+
+    /*==== ABOUT ====*/
+    .about {
+        display: inline-block;
+        padding: 50px;
+    }
+    
+    .about img{
+        width: 250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+
+    /* === Feature ===*/
 
     .features-section {
         grid-template-columns: 1fr;
