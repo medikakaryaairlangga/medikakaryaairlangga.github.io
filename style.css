@@ -118,12 +118,15 @@ header {
     display: grid;
     grid-template-columns: 30% auto;
     padding: 50px;
-    text-align: justify;
 }
 
 .about img{
     width: 250px;
     padding-right: 20px;
+}
+
+.about_text{
+    text-align: justify;
 }
 
 .features-section {
@@ -144,7 +147,7 @@ header {
 }
 
 .feature img {
-    max-width: 100%;
+    width: 60%;
     height: auto;
 }
 
@@ -252,6 +255,9 @@ h3 {
     }
 
     /* === NAVBAR === */
+    .logo img {
+        width: 100px;
+    }
     .navbar {
         display: none; /* Hide initially on mobile */
         width: 100%; 
