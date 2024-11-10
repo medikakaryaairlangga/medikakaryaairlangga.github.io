@@ -69,6 +69,7 @@ header {
 /* === INFO === */
 .info{
     margin-top: 80px;
+    margin-bottom: 280px;
 }
 .info p{
     margin-top: 300px;
@@ -76,6 +77,16 @@ header {
     font-size: 30px;
 }
 
+
+footer {
+    background-color: #003060;
+    color: white;
+    padding: 40px 20px;
+}
+.footer-ending{
+    margin-top: 15px;
+    text-align: center;
+}
 
 /* MOBILE STYLES (Responsive) */
 @media (max-width: 768px) {

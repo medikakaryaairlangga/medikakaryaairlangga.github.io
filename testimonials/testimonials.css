@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    background-color: #fff;
+}
+
+
+/* === HEADER === */
+.logo img {
+    width: 140px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hide the navbar on mobile view */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: black;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #003060;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #F97FAF; /* Change to pink on hover */
+}
+
+/* === PAKAR === */
+.testi{
+    background-color: #003060;
+    color: white;
+    margin-top: 10px;
+    padding-top: 150px;
+    padding-bottom: 60px;
+}
+.pakar1{
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+.pakar1 p{
+    text-align: justify;
+    font-size: 18px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+}
+.mahendra{
+    margin-left: 50px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pakar2{
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin-top: 50px;
+}
+.pakar2 p{
+    text-align: justify;
+    font-size: 18px;
+    margin-right: 80px;
+}
+.zaidan{
+    display: block;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==== Video Testimonials ====*/
+.tes_video_title{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+.video-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.video-thumbnail::after {
+    content: '▶';
+    font-size: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05); 
+}
+
+footer {
+    background-color: #003060;
+    color: white;
+    padding: 20px 20px;
+}
+.footer-ending{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* MOBILE STYLES (Responsive) */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /* === NAVBAR === */
+    .logo img {
+        width: 100px;
+    }
+    .navbar {
+        display: none; /* Hide initially on mobile */
+        width: 100%; 
+        justify-content: center;
+        flex-direction: column; /* Stacked by default on mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Show the navbar in a row when toggled */
+    .navbar.active {
+        display: flex; /* Display flex when active */
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: center;
+        gap: 10px; /* Adds space between items */
+    }
+
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+        color: #003060;
+        font-weight: bold;
+    }
+
+    .pakar1{
+        display: inline-block;
+    }
+    .pakar1 p{
+        text-align: justify;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .mahendra{
+        display: block;
+        width: 220px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pakar2{
+        display: inline-block;
+        margin-top: 50px;
+    }
+    .pakar2 p{
+        text-align: justify;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .zaidan{
+        display: block;
+        width: 220px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
