@@ -67,14 +67,52 @@ header {
 }
 
 /* === INFO === */
-.info{
+.product{
     margin-top: 80px;
     margin-bottom: 280px;
-}
-.info p{
-    margin-top: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
     text-align: center;
-    font-size: 30px;
+}
+.product h1{
+    text-align: center;
+    margin-top: 100px;
+}
+.mka-series{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    padding: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.airbilinest h2{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 25px;
+}
+.mka-series img{
+    text-align: center;
+    width: 260px;
+    height: 260px;
+}
+.airbilinest h3{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.airbilisun h2{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 25px;
+}
+.airbilisun-img{
+    text-align: center;
+}
+.airbilisun-img img{
+    width: 260px;
 }
 
 
@@ -125,5 +163,20 @@ footer {
         text-align: center;
         color: #003060;
         font-weight: bold;
+    }
+
+    .product{
+        justify-content: center;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .mka-series{
+        margin-top: 20px;
+        display: inline-block;
+        padding: 50px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
